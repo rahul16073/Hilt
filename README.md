@@ -1,2 +1,2 @@
 # Fetches Venues based on User Location
-#Dagger-Hilt, MVVM, Retrofit, Clean Architechture, Repository Pattern, Pagination, RecyclerView
+#Dagger-Hilt, MVVM, Retrofit, Coroutines, Clean Architechture, Repository Pattern, Pagination, RecyclerView
