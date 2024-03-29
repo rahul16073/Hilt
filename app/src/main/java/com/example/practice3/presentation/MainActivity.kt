@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
             progress_bar.visibility = View.GONE
             val  startPos = entriesList.size
             entriesList.addAll(it.entries)
-            Log.i("rahuls", entriesList.size.toString())
             binding.recyclerView.adapter = adapter
             adapter.notifyItemRangeInserted(startPos, it.entries.size)
         }
@@ -48,7 +47,7 @@ class MainActivity : AppCompatActivity() {
                 LOCATION_PERMISSION_REQUEST_CODE)
         } else {
             progress_bar.visibility = View.VISIBLE
-            viewModel.fetch("jj")
+            viewModel.fetch("")
         }
         recycler_view.addOnScrollListener(object : RecyclerView.OnScrollListener(){
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
@@ -59,7 +58,7 @@ class MainActivity : AppCompatActivity() {
                 val itemCount = layoutManager.itemCount
                 if(firstChildPos+childCount>=itemCount){
                     binding.progressBar.visibility = View.VISIBLE
-                    viewModel.fetch("jj")
+                    viewModel.fetch("")
                 }
             }
         })
@@ -67,7 +66,7 @@ class MainActivity : AppCompatActivity() {
         slider.addOnChangeListener(object : Slider.OnChangeListener{
             override fun onValueChange(slider: Slider, value: Float, fromUser: Boolean) {
                 binding.progressBar.visibility = View.VISIBLE
-                viewModel.fetch("kjdj")
+                viewModel.fetch("")
             }
 
         })

@@ -14,14 +14,7 @@ class RepositoryImpl(private val api: Api): Repository {
         query3: String,
         query4: String
     ): EntriesList? {
-        var result: Response<EntriesList>? = null
-        try {
-            result = api.fetchEntryList(/*query1, query2, query3, query4*/)
-            Log.i("rahul", result.code().toString())
-        }
-        catch (e: Exception){
-            e.printStackTrace()
-        }
+        var result = api.fetchEntryList()
         return result?.body()
     }
 }
