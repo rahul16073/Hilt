@@ -8,11 +8,6 @@ import retrofit2.http.Query
 interface Api {
 
     @GET("entries")
-    suspend fun fetchEntryList(
-//        @Query("") query1: String,
-//        @Query("") query2: String,
-//        @Query("") query3: String,
-//        @Query("") query4: String
-        ):
+    suspend fun fetchEntryList():
             Response<EntriesList>
 }
